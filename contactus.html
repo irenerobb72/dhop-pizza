@@ -7,30 +7,14 @@
     <link rel=icon href=/favicon.png>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style>
-        #pageName {
-          padding-bottom: 40px;
-          padding-top: 1px;
-          background-color: #393E41;
-          text-decoration-color: white;
-          font-weight: bold;
-        }
-        #map {
-          width: 100%;
-          height: 200px;
-          width: 300px;
-          background-color: grey
-        }
         h1 {
           color: white;
           font-weight: bold;
           text-align: center;
           font-size: 60px;
-        }
-        a {
-          font-size: 20px;
         }
         a:link {
           color: #C63D0F;
@@ -38,86 +22,139 @@
         a:hover {
           text-decoration: none;
           color: #009933;
-          /* background-color: rgba(226, 241, 215, 0.3); */
+        }
+        a {
+          font-size: 20px;
+        }
+        #map {
+          width: 100%;
+          height: 200px;
+          width: 300px;
+          background-color: grey;
+          display: inline-block;
+          position: absolute;
+        }
+        #contactUsForm {
+          display: inline-block;
+        }
+        #pageName {
+          padding-bottom: 40px;
+          padding-top: 1px;
+          background-color: #393E41;
+          text-decoration-color: white;
+          font-weight: bold;
 
         }
-        a:visited {
-        }
-
         #nav {
           float: right;
           padding: 4px;
-
         }
         #aboutus {
           padding: 15px 15px 15px 15px;
-
         }
-
         #home
         {
           padding: 15px 15px 15px 15px;
-
         }
         #menu {
           padding: 15px 15px 15px 15px;
 
         }
-
         #contactus {
           padding: 15px 15px 15px 15px;
 
         }
-        #order {
+        #employment {
           padding: 15px 15px 15px 15px;
 
         }
-
         .wrapper {
             text-align: center;
         }
 
-        .button {
-            position: absolute;
-            top: 50%;
-            background-color: #C75145;
-        }
         .welcome {
-          border-style: solid;
+          color:  black;
+          width: 600px;
+          height: 200px;
+          font-size: 18px;
           border-width: thin;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          top: 30px;
+          background-color: rgba(255,255,255, 0.3);
         }
         .footer {
           position: fixed;
           left: 0;
           bottom: 0;
           width: 100%;
-          background-color: #393E41;
+          padding-top: 1px;
+          background-color: #111;
           color: white;
+          padding-left: 10px;
           text-align: left;
-          padding-bottom: 10px;
+          padding-bottom: 1px;
+        }
+        .hours {
+          font-size: 13px;
+
         }
         .orderhere {
           float: right;
           padding: 15px 15px 15px 15px;
+        }
+        .address {
+          position: absolute;
+          top: 10px;
+          padding-right: 10px;
+          right: 0px;
+        }
+        .peperoni {
+          top: 50%;
+        }
+        .cater {
+          float: right;
+          padding-right: 10px;
+        }
+        .brand-image {
+          display: inline-block;
 
         }
-
-
+        .brand-title {
+          font-size: 24px;
+          display: inline-block;
+        }
+        .navbar {
+          background-color: #111;
+        }
     </style>
   </head>
-
   <body>
     <header>
-      <div id="pageName">
-          <h1>Durham House of Pizza</h1>
-          <div id="nav">
-            <a id="home" href="./index.html">Home</a>
-            <a id="menu" href="./menu.html">Menu</a>
-            <a id="employment" href="./employment.html">Employment</a>
-            <a id="contactus" href="./contactus.html">Contact Us</a>
-            <a id="aboutus" href="./aboutus.html">About Us</a>
-          </div>
-      </div>
+      <nav class="navbar navbar-expand-lg ">
+        <a class="navbar-brand" href="./index.html">
+          <img class="brand-image" src="./img/dhop-logo.png" height="100" width="100">
+          <h1 class="brand-title">Durham House of Pizza</h1>
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./employment.html">Employment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./aboutus.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <div id="contactUsForm">
       <form action="mailto:dh1068@wildcats.unh.edu" method="post" enctype="text/plain">
@@ -135,55 +172,63 @@
         <input type="radio" name="source" value="social"> Social Media<br>
         <input type="radio" name="source" value="web"> Web Search<br>
         <input type="radio" name="source" value="Other"> Other <br><br>
-        
+
         Do you want us to reply to you by email?<br>
         <br>
         <input type="radio" name="reply" value="yes"> Yes<br>
         <input type="radio" name="reply" value="no"> No <br><br>
-        
+
       Questions and Comments:<br>
       <input id="contactUsButton" type="text" name="comment" size="50"><br><br>
       <input id="contactUsButton" type="submit" value="Send">
       <input id="contactUsButton" type="reset" value="Reset">
       </form>
     </div>
-    <footer> 
-      <div class="footer">
-        <p>Hours:</p>
-        <p>
-          Sunday	12–9PM </br>
-          Monday	11AM–10PM</br>
-          Tuesday	11AM–10PM</br>
-          Wednesday	11AM–10PM</br>
-          Thursday	11AM–2AM</br>
-          Friday	11AM–2AM</br>
-          Saturday	11AM–2AM
-        </p>
-      </div>
-    </footer> 
+
     <div id="map"></div>
     <script>
     function initMap() {
-  var dhop = { lat: 43.134301, lng: -70.925686 };
+      var dhop = { lat: 43.134301, lng: -70.925686 };
 
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: dhop,
-  });
-  function createMarker(position, map) {
-    var marker = new google.maps.Marker({
-      position: position,
-      map: map,
-    });
-  }
-  createMarker(dhop, map);
-}
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: dhop,
+      });
+      function createMarker(position, map) {
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+        });
+      }
+      createMarker(dhop, map);
+    }
 </script>
     <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxq8Qh5EDjO5HVRhvRgIAFUCRCe7H4zs&callback=initMap">
   </script>
 
-    <script src="bundle.js"></script>
-
+    <footer>
+      <div class="footer">
+        <div class="hours">
+          <p>Hours:</p>
+          <p>
+           Sunday	12–9PM </br>
+           Monday	- Wednesday 11AM–10PM</br>
+           Thursday - Saturday	11AM–2AM</br>
+           * summer hours may vary</br>
+        </p>
+        </div>
+        <div class="address">
+          <p>
+            38 Main St, Durham, NH 03824 </br>
+            (603) 868-2224
+          </p>
+          <p><a href="https://www.facebook.com/durhamhouseofpizza/"><img src="./img/flogo.png" height="35" width="35"> </a></p>
+        </div>
+        <p class="cater">We cater and deliver, contact us for more information</p>
+      </div>
+    </footer>
   </body>
+
+</body>
 </html>

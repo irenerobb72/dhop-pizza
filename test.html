@@ -10,203 +10,61 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style>
-        h1 {
-          color: white;
-          font-weight: bold;
-          text-align: center;
-          font-size: 60px;
-        }
-        #pageName {
-          padding-bottom: 40px;
-          padding-top: 1px;
-          background-color: #393E41;
-          text-decoration-color: white;
-          font-weight: bold;
-
-        }
-        #map {
-          width: 100%;
-          height: 200px;
-          width: 300px;
-          background-color: grey
-        }
-
-        a {
-          font-size: 20px;
-        }
-        a:link {
-          color: #C63D0F;
-        }
-        a:hover {
-          text-decoration: none;
-          color: #009933;
-          /* background-color: rgba(226, 241, 215, 0.3); */
-
-        }
-        a:visited {
-        }
-
-        #nav {
-          float: right;
-          padding: 4px;
-
-        }
-        #aboutus {
-          padding: 15px 15px 15px 15px;
-
-        }
-
-        #home
-        {
-          padding: 15px 15px 15px 15px;
-
-        }
-        #menu {
-          padding: 15px 15px 15px 15px;
-
-        }
-
-        #contactus {
-          padding: 15px 15px 15px 15px;
-
-        }
-        #order {
-          padding: 15px 15px 15px 15px;
-
-        }
-
-        .wrapper {
-            text-align: center;
-        }
-
-        .button {
-            position: absolute;
-            top: 50%;
-            background-color: #C75145;
-        }
-        .welcome {
-          border-style: solid;
-          border-width: thin;
-        }
-        .footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          background-color: #393E41;
-          color: white;
-          text-align: left;
-          padding-bottom: 10px;
-        }
-        .orderhere {
-          float: right;
-          padding: 15px 15px 15px 15px;
-
-        }
-        .brand-image {
-          display: inline-block;
-
-        }
-        .brand-title {
-          font-size: 24px;
-          display: inline-block;
-        }
-        .navbar {
-          background-color: #111;
-        }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    /* .container2 {
+      float: left;
+    }
+    .container3 {
+      float: left;
+    } */
     </style>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="./index.html">
-          <img class="brand-image" src="./img/dhop-logo.png" height="100" width="100">
-          <h1 class="brand-title">Durham House of Pizza</h1>
-        </a>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./menu.html">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./employment.html">Employment</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contactus.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./aboutus.html">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div id="contactUsForm">
-      <form action="mailto:dh1068@wildcats.unh.edu" method="post" enctype="text/plain">
-      Name:<br>
-      <input type="text" name="name"><br>
-      E-mail:<br>
-      <input type="text" name="mail"><br>
-      Phone:<br>
-      <input type="text" name="phone"><br><br>
-
-      How did you find us? <br>
-      <br>
-        <input type="radio" name="source" value="friend"> Friend<br>
-        <input type="radio" name="source" value="print"> Print Advertising<br>
-        <input type="radio" name="source" value="social"> Social Media<br>
-        <input type="radio" name="source" value="web"> Web Search<br>
-        <input type="radio" name="source" value="Other"> Other <br><br>
-
-        Do you want us to reply to you by email?<br>
-        <br>
-        <input type="radio" name="reply" value="yes"> Yes<br>
-        <input type="radio" name="reply" value="no"> No <br><br>
-
-      Questions and Comments:<br>
-      <input id="contactUsButton" type="text" name="comment" size="50"><br><br>
-      <input id="contactUsButton" type="submit" value="Send">
-      <input id="contactUsButton" type="reset" value="Reset">
-      </form>
-    </div>
-    <footer>
-      <div class="footer">
-        <p>Hours:</p>
-        <p>
-          Sunday	12–9PM </br>
-          Monday	11AM–10PM</br>
-          Tuesday	11AM–10PM</br>
-          Wednesday	11AM–10PM</br>
-          Thursday	11AM–2AM</br>
-          Friday	11AM–2AM</br>
-          Saturday	11AM–2AM
-        </p>
+    <h2>Pizza</h2>
+    <h3>Specailty Pizza</h3>
+    <div class="container">
+      <div class="container1">
+        <div class="row">
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+        </div>
       </div>
-    </footer>
-    <div id="map"></div>
-    <script>
-    function initMap() {
-  var dhop = { lat: 43.134301, lng: -70.925686 };
-
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: dhop,
-  });
-  function createMarker(position, map) {
-    var marker = new google.maps.Marker({
-      position: position,
-      map: map,
-    });
-  }
-  createMarker(dhop, map);
-}
-</script>
-    <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxq8Qh5EDjO5HVRhvRgIAFUCRCe7H4zs&callback=initMap">
-  </script>
-
-    <script src="bundle.js"></script>
-
+      <div class="container2">
+        <div class="row">
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+        </div>
+      </div>
+      <div class="container3">
+        <div class="row">
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

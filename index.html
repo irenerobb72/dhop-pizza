@@ -145,14 +145,16 @@
         .d-block {
           margin: auto;
         }
-
+        .carousel {
+          margin-top: 10px;
+        }
     </style>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="./index.html">
-          <img class="brand-image" src="./img/dhop-logo.png" height="100" width="90">
+          <img class="brand-image" src="./img/dhop-logo.png" height="100" width="100">
           <h1 class="brand-title">Durham House of Pizza</h1>
         </a>
         <ul class="navbar-nav ml-auto">
@@ -259,10 +261,19 @@
       }
       createMarker(dhop, map);
     }
-
+    $("#carouselExampleIndicators").carousel();
     $('.carousel').carousel({
       interval: 2000
     })
+    $(".item").click(function(){
+    $("#carouselExampleIndicators").carousel(1);
+    });
+    $(".left").click(function(){
+        $("#carouselExampleIndicators").carousel("prev");
+    });
+    $(".left").click(function(){
+        $("#carouselExampleIndicators").carousel("next");
+    });
 
   </script>
   <script async defer

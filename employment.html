@@ -100,7 +100,9 @@
         .d-block {
           margin: auto;
         }
-
+        .form-row {
+          width: 600px;
+        }
     </style>
   </head>
   <body>
@@ -130,6 +132,80 @@
         </ul>
       </nav>
     </header>
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-5">
+          <input type="text" class="form-control" placeholder="City">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="State">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Zip">
+        </div>
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control" placeholder="Telephone number">
+      </div>
+      <div class="col-3">
+        <label for="educationHistory">Education History</label>
+        <input type="text" class="form-control" placeholder="High Schol name">
+      </div>
+      <div class="col-3">
+        <input class="form-control" placeholder="Years attended">
+      </div>
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Did you graduate?</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              No
+            </label>
+          </div>
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control" placeholder="College Name">
+        </div>
+        <div class="col-3">
+          <input class="form-control" placeholder="Years attended">
+        </div>
+
+        <div class="col-3">
+          <input class="form-control" placeholder="Major">
+        </div>
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Did you graduate?</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     <footer>
       <div id="flex-container">
         <div class="col-md-6">

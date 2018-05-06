@@ -151,21 +151,41 @@
     </header>
     <div id="contactUsForm">
       <form action="mailto:dh1068@wildcats.unh.edu" method="post" enctype="text/plain">
-      Name:<br>
-      <input type="text" name="name"><br>
-      E-mail:<br>
-      <input type="text" name="mail"><br>
-      Phone:<br>
-      <input type="text" name="phone"><br><br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Name</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Phone number</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
+        </div>
 
-      How did you find us? <br>
-      <br>
-        <input type="radio" name="source" value="friend"> Friend<br>
-        <input type="radio" name="source" value="print"> Print Advertising<br>
-        <input type="radio" name="source" value="social"> Social Media<br>
-        <input type="radio" name="source" value="web"> Web Search<br>
-        <input type="radio" name="source" value="Other"> Other <br><br>
+        <label for="exampleInputEmail1">Where did you hear about us?</label>
 
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">Friend</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">Print Advertising</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option3">
+          <label class="form-check-label" for="exampleRadios2">Social Media</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option4">
+          <label class="form-check-label" for="exampleRadios2">Web Search</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5">
+          <label class="form-check-label" for="exampleRadios2">Other</label>
+        </div>
         Do you want us to reply to you by email?<br>
         <br>
         <input type="radio" name="reply" value="yes"> Yes<br>

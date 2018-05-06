@@ -30,7 +30,13 @@
           background-color: #111;
           color: white;
         }
+        h2 {
+          font-size: 25px;
+        }
+        form {
+          text-align: center;
 
+        }
         #pageName {
           padding-bottom: 40px;
           padding-top: 1px;
@@ -103,6 +109,9 @@
         .form-row {
           width: 600px;
         }
+        .form {
+          margin: 0 auto;
+        }
     </style>
   </head>
   <body>
@@ -133,6 +142,7 @@
       </nav>
     </header>
     <form>
+      <h2>Employment Form</h2>
       <div class="form-row">
         <div class="col">
           <input type="text" class="form-control" placeholder="First name">
@@ -157,7 +167,7 @@
       </div>
       <div class="col-3">
         <label for="educationHistory">Education History</label>
-        <input type="text" class="form-control" placeholder="High Schol name">
+        <input type="text" class="form-control" placeholder="High School name">
       </div>
       <div class="col-3">
         <input class="form-control" placeholder="Years attended">
@@ -206,6 +216,107 @@
           </div>
         </div>
       </div>
+      <form id="order1" method="post" action="http://dhop.com/applications">
+      <div>
+        <p><em><strong>Contact Info</strong></em></p>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" size="35" value=""/>
+      </div>
+      <div>
+        <label for="address" class="fixedwidth">Address</label>
+        <input type="text" name="address" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
+      </div>
+      <div>
+        <label for="tele-number" class="fixedwidth">Telephone Number</label>
+        <input type="text" name="tele-number" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" size="50" value=""/>
+      <div>
+        <p><em><strong>Education History</strong></em></p>
+      <div>
+        <label for="hs" class="fixedwidth">High School Name</label>
+        <input type="text" name="highschool" id="field-ZZZZZZZZZZZZZ" size="30" value=""/>
+      </div>
+      <div>
+        <label for="hsyears" class="fixedwidth">Years Attended</label>
+        <input type="text" name="highschoolyears" id="field-ZZZZZZZZZZZZZ" size="4" value=""/>
+      </div>
+      <span><strong>Graduated?</strong></span>
+
+      <div>
+        <label for="hsyes">Yes</label>
+        <input type="radio" name="hsgrad" id="yes" value="yes"><br>
+        <label for="hsno">No</label>
+        <input type="radio" name="hsgrad" id="no" value="no"><br>
+      </div>
+      <p></p>
+      <div>
+        <label for="col" class="fixedwidth">College Name</label>
+        <input type="text" name="college" id="field-ZZZZZZZZZZZZZ" size="30" value=""/>
+      </div>
+      <div>
+        <label for="maj" class="fixedwidth">Major</label>
+        <input type="text" name="major" id="field-ZZZZZZZZZZZZZ" size="30" value=""/>
+      </div>
+      <div>
+        <label for="colyears" class="fixedwidth">Years Attended</label>
+        <input type="text" name="collegeyrs" id="field-ZZZZZZZZZZZZZ" size="4" value=""/>
+      </div>
+      <span><strong>Graduated?</strong></span>
+      <div>
+        <label for="colyes">Yes</label>
+        <input type="radio" name="colgrad" id="yes" value="yes"><br>
+        <label for="colno">No</label>
+        <input type="radio" name="colgrad" id="no" value="no"><br>
+      </div>
+      <p><em><strong>Hours</strong></em></p>
+      <div>
+        <label for="full">Full Time</label>
+        <input type="radio" name="occupation" id="full" value="full"><br>
+        <label for="professor">Part Time</label>
+        <input type="radio" name="occupation" id="part" value="part"><br>
+      </div>
+      <div>
+        <label for="pos" class="fixedwidth">Position Desired</label>
+        <input type="text" name="pos" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
+      </div>
+      <div>
+        <label for="address" class="fixedwidth">Salary Desired</label>
+        <input type="text" name="salary" id="field-ZZZZZZZZZZZZZ" size="5" value=""/>
+      </div>
+      <p>Describe Hours Available</p>
+      <label for="textbox"></label>
+      <textarea name="textbox" id="textbox" rows="4" cols="40"></textarea>
+    </div>
+    <p><em><strong>Employment History</strong></em></p>
+    <div>
+      <p>Describe Past Jobs</p>
+      <label for="textbox"></label>
+      <textarea name="textbox" id="textbox" rows="4" cols="40"></textarea>
+    </div>
+    <div>
+      <label for="pos" class="fixedwidth">Previous Manager Phone #</label>
+      <input type="text" name="pos" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
+    </div>
+    <div>
+      <p>Additional Info</p>
+      <label for="textbox"></label>
+      <textarea name="textbox" id="textbox" rows="4" cols="40"></textarea>
+    </div>
+    <div>
+      <label for="reply" class="fixedwidth">Which form of reply do you prefer?</label>
+      <select name="reply">
+        <option value="Call back">Call back</option>
+        <option value="E-mail back">E-mail back</option>
+      </select>
+    </div>
+    <br>
+    <div class="submitbutton">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
     <footer>
       <div id="flex-container">
         <div class="col-md-6">

@@ -26,46 +26,35 @@
         a {
           font-size: 20px;
         }
-        .footer {
-          background-color: #333;
-          color: white;
+        ul {
+          list-style: none;
+          list-style-position: inside;
+          padding-left: 0;
         }
-
+        footer {
+          background-color: #111;
+          color: white;
+          padding: 50px 0px 50px 0px;
+        }
+        form {
+          padding-left: 10px;
+        }
         #pageName {
           padding-bottom: 40px;
           padding-top: 1px;
           background-color: #393E41;
           text-decoration-color: white;
           font-weight: bold;
-
         }
         #map {
-          width: 100%;
-          height: 200px;
-          width: 300px;
+          width: 250px;
+          height: 150px;
           background-color: grey;
           display: inline-block;
-          position: absolute;
         }
         #nav {
           float: right;
           padding: 4px;
-        }
-
-        .wrapper {
-            text-align: center;
-        }
-        .welcome {
-          color:  black;
-          width: 600px;
-          height: 200px;
-          font-size: 18px;
-          border-width: thin;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          top: 30px;
-          background-color: rgba(255,255,255, 0.3);
         }
         .list-group {
           background-color: black;
@@ -78,42 +67,7 @@
           display: inline-block;
         }
         .navbar {
-          background-color: #333;
-        }
-        /* .col-md-6 {
-          display: inline-block;
-          position: relative;
-          padding-left: 15px;
-          padding-right: 15px;
-        }
-        .hours {
-          font-size: 13px;
-          float: left;
-        }
-        .location {
-          float: right;
-
-        }
-        .address {
-          position: absolute;
-          left: 0;
-          right: 0;
-          margin: auto;
-        } */
-        #flex-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          max-width: 900px;
-          margin: 0 auto;
-          margin-left: 0;
-        }
-        .col-md-6 {
-          width: 300px;
-          height: 200px;
-          background-color: #333;
-          color: white;
-          overflow: hidden;
+          background-color: #111;
         }
         .d-block {
           margin: auto;
@@ -154,41 +108,38 @@
     <div class="wrapper">
       <div class="welcome">
         <p>
-          Durham House of Pizza is a family owned and operated business in the heart of Durham,
-          New Hampshire. Each item on the menu, which consists of more than just pizzas, is
-          handmade in house. Here at Durham House of Pizza we like to take care of our
-          customers, so come on over and tell us what you’d like.
+          The Durham House of Pizza, fondly known as “DHOP” has been a staple of Durham and the University of New Hampshire since 1976.  Sitting cozy on the thoroughfare of Main Street, DHOP has been providing the town of Durham and UNH community with the freshest and highest quality pizza for over 42 years.  Family owned and opperated, DHOP was originally situated where Rite Aid Pharmacy is today.  It later moved to the current location at 38 Main Street… and the rest is history.  Durham House of pizza has built its iconic reputation through years of creativity, hard work, original recipes, fresh quality products, and lots of love for pizza!
+                  Recently, the pizza paddle has been passed from the founder, Steve Petrovitsis, to his two sons - John and Justin.  The DHOP dynasty continues to live on through them!
+ 
         </p>
       </div>
     </div>
     <footer>
-      <div id="flex-container">
-        <div class="col-md-6">
-          <div class="hours">
-            <p>Hours:</p>
-            <p>
-              Sunday	12–9PM </br>
-              Monday	- Wednesday 11AM–10PM</br>
-              Thursday - Saturday	11AM–2AM</br>
-              * summer hours may vary</br>
-            </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 info">
+            <h4 class="info_header">Hours</h4>
+            <ul class="info_list">
+              <li class="info_item">Sunday	12–9PM </li>
+              <li class="info_item">Monday	- Wednesday 11AM–10PM</li>
+              <li class="info_item">Thursday - Saturday	11AM–2AM</li>
+              <li class="info_item">* summer hours may vary</li>
+            </ul>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="address">
-            <p>Contact Information:</p>
-            <p>
-              38 Main St, Durham, NH 03824 </br>
-              (603) 868-2224
-            </p>
-            <p><a href="https://www.facebook.com/durhamhouseofpizza/"><img src="./img/flogo.png" height="35" width="35"> </a></p>
-            <p class="cater">We cater and deliver, contact us for more information</p>
+          <div class="col-md-4 info">
+            <h4 class="info_header">Contact Information</h4>
+            <ul class="info_list">
+              <li class="info_item"> 38 Main St, Durham, NH 03824 </li>
+              <li class="info_item">(603) 868-2224</li>
+              <li class="info_item"> <a href="https://www.facebook.com/durhamhouseofpizza/"><img src="./img/flogo.png" height="35" width="35"> </a></p> </li>
+              <li class="info_item">We cater and deliver, contact us for more information</li>
+            </ul>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="location">
-            <p>Location:</p>
-            <div id="map"></div>
+          <div class="col-md-4 info">
+            <div class="location">
+              <h4 class="info_header">Location</h4>
+              <div class="info_item" id="map"></div>
+            </div>
           </div>
         </div>
       </div>

@@ -33,9 +33,18 @@
         h2 {
           font-size: 25px;
         }
-        form {
-          text-align: center;
+        textarea{
+          width: 600px;
+          min-width:200px;
+          max-width:600px;
 
+          height:100px;
+          min-height:100px;
+          max-height:200px;
+        }
+        form {
+          padding-left: 100px;
+          padding-bottom: 50px;
         }
         ul {
           list-style: none;
@@ -64,7 +73,6 @@
         .list-group {
           background-color: black;
         }
-
         .brand-image {
           display: inline-block;
         }
@@ -75,12 +83,11 @@
         .navbar {
           background-color: #111;
         }
-      
-        .form-row {
+        .custom-select {
           width: 600px;
         }
-        .form {
-          margin: 0 auto;
+        .form-row {
+          width: 600px;
         }
     </style>
   </head>
@@ -113,109 +120,98 @@
     </header>
 
     <form id="order1" method="post" action="http://dhop.com/applications">
-      <div>
-        <p><em><strong>Contact Info</strong></em></p>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" size="35" value=""/>
+      <h3>Contact Information</h3>
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail1" >Full name</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
       </div>
-      <div>
-        <label for="address" class="fixedwidth">Address</label>
-        <input type="text" name="address" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Address</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Address">
       </div>
-      <div>
-        <label for="tele-number" class="fixedwidth">Telephone Number</label>
-        <input type="text" name="tele-number" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Phone number</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
       </div>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" size="50" value=""/>
-      <div>
-          <p><em><strong>Education History</strong></em></p>
-        <div>
-          <label for="hs" class="fixedwidth">High School Name</label>
-          <input type="text" name="highschool" id="field-ZZZZZZZZZZZZZ" size="30" value=""/>
-        </div>
-        <div>
-          <label for="hsyears" class="fixedwidth">Years Attended</label>
-          <input type="text" name="highschoolyears" id="field-ZZZZZZZZZZZZZ" size="4" value=""/>
-        </div>
-        <span><strong>Graduated?</strong></span>
+      <h3>Education History</h3>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">High School Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter high school name">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Years attended</label>
+        <input type="text" class="form-control" id="formGroupExampleInput">
+      </div>
+      <label for="formGroupExampleInput">Did you graduate?</label>
 
-        <div>
-          <label for="hsyes">Yes</label>
-          <input type="radio" name="hsgrad" id="yes" value="yes"><br>
-          <label for="hsno">No</label>
-          <input type="radio" name="hsgrad" id="no" value="no"><br>
-        </div>
-        <p></p>
-        <div>
-          <label for="col" class="fixedwidth">College Name</label>
-          <input type="text" name="college" id="field-ZZZZZZZZZZZZZ" size="30" value=""/>
-        </div>
-        <div>
-          <label for="maj" class="fixedwidth">Major</label>
-          <input type="text" name="major" id="field-ZZZZZZZZZZZZZ" size="30" value=""/>
-        </div>
-        <div>
-          <label for="colyears" class="fixedwidth">Years Attended</label>
-          <input type="text" name="collegeyrs" id="field-ZZZZZZZZZZZZZ" size="4" value=""/>
-        </div>
-        <span><strong>Graduated?</strong></span>
-        <div>
-          <label for="colyes">Yes</label>
-          <input type="radio" name="colgrad" id="yes" value="yes"><br>
-          <label for="colno">No</label>
-          <input type="radio" name="colgrad" id="no" value="no"><br>
-        </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option3">
+        <label class="form-check-label" for="exampleRadios2">Yes</label>
       </div>
-      <div>
-        <p><em><strong>Hours</strong></em></p>
-        <div>
-          <label for="full">Full Time</label>
-          <input type="radio" name="occupation" id="full" value="full"><br>
-          <label for="professor">Part Time</label>
-          <input type="radio" name="occupation" id="part" value="part"><br>
-        </div>
-        <div>
-          <label for="pos" class="fixedwidth">Position Desired</label>
-          <input type="text" name="pos" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
-        </div>
-        <div>
-          <label for="address" class="fixedwidth">Salary Desired</label>
-          <input type="text" name="salary" id="field-ZZZZZZZZZZZZZ" size="5" value=""/>
-        </div>
-        <p>Describe Hours Available</p>
-        <label for="textbox"></label>
-        <textarea name="textbox" id="textbox" rows="4" cols="40"></textarea>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option4">
+        <label class="form-check-label" for="exampleRadios2">No</label>
       </div>
-      <div>
-        <p><em><strong>Employment History</strong></em></p>
-        <div>
-          <p>Describe Past Jobs</p>
-          <label for="textbox"></label>
-          <textarea name="textbox" id="textbox" rows="4" cols="40"></textarea>
-        </div>
-        <div>
-          <label for="pos" class="fixedwidth">Previous Manager Phone #</label>
-          <input type="text" name="pos" id="field-ZZZZZZZZZZZZZ" size="40" value=""/>
-        </div>
-        <div>
-          <p>Additional Info</p>
-          <label for="textbox"></label>
-          <textarea name="textbox" id="textbox" rows="4" cols="40"></textarea>
-        </div>
-        <div>
-          <label for="reply" class="fixedwidth">Which form of reply do you prefer?</label>
-          <select name="reply">
-            <option value="Call back">Call back</option>
-            <option value="E-mail back">E-mail back</option>
-          </select>
-        </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">College Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter college name">
       </div>
-      <br>
-      <div class="submitbutton">
-        <input type="submit" value="Submit">
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Years attended</label>
+        <input type="text" class="form-control" id="formGroupExampleInput">
       </div>
-      <br>
+      <label for="formGroupExampleInput">Did you graduate?</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option1">
+        <label class="form-check-label" for="exampleRadios2">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">No</label>
+      </div>
+
+      <h3>Hours</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option1">
+        <label class="form-check-label" for="exampleRadios2">Full time</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">Part time</label>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Position Desired</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Salary Desired </label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Describe Hours Available</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <h3>Employment History</h3>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Describe Past jobs</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Previous Mangers Phone Number</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Additional Information</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <label for="custom-select">How would you like us to reply?</label>
+      <select class="custom-select">
+        <option value="1">Email back</option>
+        <option value="2">Call back</option>
+      </select>
+      <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
     <footer >
       <div class="container">

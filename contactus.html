@@ -26,9 +26,9 @@
         a {
           font-size: 20px;
         }
-
-        #contactUsForm {
-          display: inline-block;
+        .footer {
+          background-color: #111;
+          color: white;
         }
         #pageName {
           padding-bottom: 40px;
@@ -36,35 +36,22 @@
           background-color: #393E41;
           text-decoration-color: white;
           font-weight: bold;
-
+        }
+        #map {
+          width: 100%;
+          height: 200px;
+          width: 300px;
+          background-color: grey;
+          display: inline-block;
+          position: absolute;
         }
         #nav {
           float: right;
           padding: 4px;
         }
-        #aboutus {
-          padding: 15px 15px 15px 15px;
-        }
-        #home
-        {
-          padding: 15px 15px 15px 15px;
-        }
-        #menu {
-          padding: 15px 15px 15px 15px;
-
-        }
-        #contactus {
-          padding: 15px 15px 15px 15px;
-
-        }
-        #employment {
-          padding: 15px 15px 15px 15px;
-
-        }
         .wrapper {
             text-align: center;
         }
-
         .welcome {
           color:  black;
           width: 600px;
@@ -77,42 +64,11 @@
           top: 30px;
           background-color: rgba(255,255,255, 0.3);
         }
-        .footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          padding-top: 1px;
-          background-color: #111;
-          color: white;
-          padding-left: 10px;
-          text-align: left;
-          padding-bottom: 1px;
-        }
-        .hours {
-          font-size: 13px;
-
-        }
-        .orderhere {
-          float: right;
-          padding: 15px 15px 15px 15px;
-        }
-        .address {
-          position: absolute;
-          top: 10px;
-          padding-right: 10px;
-          right: 0px;
-        }
-        .peperoni {
-          top: 50%;
-        }
-        .cater {
-          float: right;
-          padding-right: 10px;
+        .list-group {
+          background-color: black;
         }
         .brand-image {
           display: inline-block;
-
         }
         .brand-title {
           font-size: 24px;
@@ -121,10 +77,35 @@
         .navbar {
           background-color: #111;
         }
+        #flex-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          max-width: 900px;
+          margin: 0 auto;
+          margin-left: 0;
+        }
+        .col-md-6 {
+          width: 300px;
+          height: 200px;
+          background-color: #111;
+          color: white;
+          overflow: hidden;
+        }
+        .d-block {
+          margin: auto;
+        }
+        .carousel {
+          margin-top: 10px;
+        }
+        form {
+          padding-left: 10px;
+        }
     </style>
   </head>
   <body>
     <header>
+      <!--navigation, everything that is on the top bar of the site-->
       <nav class="navbar navbar-expand-lg ">
         <a class="navbar-brand" href="./index.html">
           <img class="brand-image" src="./img/dhop-logo.png" height="100" width="100">
@@ -149,23 +130,20 @@
         </ul>
       </nav>
     </header>
-    <div id="contactUsForm">
-      <form action="mailto:dh1068@wildcats.unh.edu" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Name</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name">
-        </div>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Phone number</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
-        </div>
-
-        <label for="exampleInputEmail1">Where did you hear about us?</label>
-
+    <form action="mailto:dh1068@wildcats.unh.edu" method="post" enctype="text/plain">
+      <div class="form-group col-md-4">
+        <label for="exampleInputEmail1" >Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="formGroupExampleInput">Phone number</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter phone number">
+      </div>
+      <label for="exampleInputEmail1">Where did you hear about us?</label>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
           <label class="form-check-label" for="exampleRadios1">Friend</label>
@@ -186,41 +164,76 @@
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option5">
           <label class="form-check-label" for="exampleRadios2">Other</label>
         </div>
-        Do you want us to reply to you by email?<br>
-        <br>
-        <input type="radio" name="reply" value="yes"> Yes<br>
-        <input type="radio" name="reply" value="no"> No <br><br>
+        <label for="exampleInputEmail1">Do you want us to reply to you by email?</label>
 
-      Questions and Comments:<br>
-      <input id="contactUsButton" type="text" name="comment" size="50"><br><br>
-      <input id="contactUsButton" type="submit" value="Send">
-      <input id="contactUsButton" type="reset" value="Reset">
-      </form>
-    </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">Yes</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">No</label>
+        </div>
 
-
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Questions and Comments:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
     <footer>
-      <div class="footer">
-        <div class="hours">
-          <p>Hours:</p>
-          <p>
-           Sunday	12–9PM </br>
-           Monday	- Wednesday 11AM–10PM</br>
-           Thursday - Saturday	11AM–2AM</br>
-           * summer hours may vary</br>
-        </p>
+      <div id="flex-container">
+        <div class="col-md-6">
+          <div class="hours">
+            <p>Hours:</p>
+            <p>
+              Sunday	12–9PM </br>
+              Monday	- Wednesday 11AM–10PM</br>
+              Thursday - Saturday	11AM–2AM</br>
+              * summer hours may vary</br>
+            </p>
+          </div>
         </div>
-        <div class="address">
-          <p>
-            38 Main St, Durham, NH 03824 </br>
-            (603) 868-2224
-          </p>
-          <p><a href="https://www.facebook.com/durhamhouseofpizza/"><img src="./img/flogo.png" height="35" width="35"> </a></p>
+        <div class="col-md-6">
+          <div class="address">
+            <p>Contact Information:</p>
+            <p>
+              38 Main St, Durham, NH 03824 </br>
+              (603) 868-2224
+            </p>
+            <p><a href="https://www.facebook.com/durhamhouseofpizza/"><img src="./img/flogo.png" height="35" width="35"> </a></p>
+            <p class="cater">We cater and deliver, contact us for more information</p>
+          </div>
         </div>
-        <p class="cater">We cater and deliver, contact us for more information</p>
+        <div class="col-md-6">
+          <div class="location">
+            <p>Location:</p>
+            <div id="map"></div>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
+  <script>
+    function initMap() {
+      var dhop = { lat: 43.134301, lng: -70.925686 };
 
-</body>
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: dhop,
+      });
+      function createMarker(position, map) {
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+        });
+      }
+      createMarker(dhop, map);
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyxq8Qh5EDjO5HVRhvRgIAFUCRCe7H4zs&callback=initMap">
+  </script>
 </html>
